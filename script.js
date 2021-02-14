@@ -80,34 +80,36 @@ function f_operation(symbol_type){
 
 function f_result(){
 	if(current_value != 0){	
-		history_array.push(current_value);
+		history_array.push(current_value);//????????????????? переделать!
 		history_value = history_array.join('');
 		current_array = [];
 		result=eval(history_value);
+		history_array.push('=',result);
 
 	}
+	
 	document.getElementById("input_area").innerHTML = result;
-	document.getElementById("history").innerHTML = history_value;
-	history_array=[];
+	document.getElementById("history").innerHTML = history_array.join('');
+	
+	//history_array=[];
 }
 
 function f_more_btn(){
 	if (btn_visibility==false){
-		document.getElementsByClassName("additional_button")[0].style.visibility = "visible";
-		document.getElementsByClassName("additional_button")[1].style.visibility = "visible";
-		document.getElementsByClassName("additional_button")[2].style.visibility = "visible";
-		document.getElementsByClassName("additional_button")[3].style.visibility = "visible";
+		for(i=0; i<4; i++){
+			document.getElementsByClassName("additional_button")[i].style.visibility = "visible";
+		}
 		btn_visibility=true;
 	}
 	else {
-		document.getElementsByClassName("additional_button")[0].style.visibility = "hidden";
-		document.getElementsByClassName("additional_button")[1].style.visibility = "hidden";
-		document.getElementsByClassName("additional_button")[2].style.visibility = "hidden";
-		document.getElementsByClassName("additional_button")[3].style.visibility = "hidden";
+		for(i=0; i<4; i++){
+			document.getElementsByClassName("additional_button")[i].style.visibility = "hidden";
+		}
 		btn_visibility=false;
-}
+	}
 	
 }
+
 
 function f_percent(){
 	history_value=history_array[history_array.length-2];
@@ -117,4 +119,22 @@ function f_percent(){
     alert(history_array);
 	document.getElementById("input_area").innerHTML = result;
 	document.getElementById("history").innerHTML = history_value;
+}
+
+function f_math(oper_type){
+	switch(oper_type){
+			case 'tan':
+				result=Math.tan(current_value);
+			break;
+			case 'sin':
+				result=Math.sin(current_value);
+			break;
+			case 'cos':
+				result=Math.cos(current_value);
+			break;
+			case 'sqrt':
+				result=Math.sqrt(current_value);
+			break;
+	}
+	document.getElementById("input_area").innerHTML = result;
 }

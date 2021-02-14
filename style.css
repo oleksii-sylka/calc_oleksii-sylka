@@ -1,4 +1,8 @@
-.block_input { 
+*{
+ 	font-family: Verdana;
+
+}
+.block_input, .block_output { 
 	width: 400px;
     height: 300px; 
     background: white;
@@ -7,49 +11,27 @@
     border: solid 1px black; 
     float: left;
    }
-.block_output { 
-    width: 400px; 
-    height: 300px; 
-    background: white; 
-    padding: 5px; 
-    border: solid 1px black; 
-    float: left; 
-    position: relative; 
-}
-
 
 .area{
 	width: 380px;
 	margin: 10px;
 	border: solid 1px grey; 
+	font-size: 20px;
 	text-align: right;
-	font-family: Verdana;
-    font-size: 20px;
 }
-
-
-.button {
-   
-    width: 90px; 
+.button, .button_spec, .additional_button {
+    width: 85px; 
     height: 30px;
     background-color: #c0c0c0; 
     border: none;
     border-radius: 6px;
-    font-family: Verdana;
-    font-size: 12px;
     text-align: center;
     margin: 3px 3px;
     cursor: pointer;
 }
 .button_spec {
-	width: 90px; 
-    height: 30px;
-    background-color: grey;
-    border: none;
-    border-radius: 6px;
-    font-family: Verdana;
-    font-size: 12px;
-    text-align: center;
-    margin: 3px 3px;
-    cursor: pointer;
+	background-color: grey;
 } 
+.additional_button {
+	visibility: hidden;
+}

@@ -12,34 +12,39 @@
 
  
  
- <input type="button" class="button_spec" id="btn_more" value="More">
- <input type="button" class="button_spec" id="btn_%" value="%">
- <input type="button" class="button_spec" id="btn_c" value="C">
- <input type="button" class="button_spec" id="btn_del_num" value="←" onclick="del_symbol();">
+ <input type="button" class="button_spec" value="More" onclick="f_more_btn();">
+ <input type="button" class="button_spec" value="%" onclick="f_percent();">
+ <input type="button" class="button_spec" value="C">
+ <input type="button" class="button_spec" value="←" onclick="del_symbol();">
 
- <input type="button" class="button" id="btn_7" value="7" onclick="get_value(7);">
- <input type="button" class="button" id="btn_8" value="8" onclick="get_value(8);">
- <input type="button" class="button" id="btn_9" value="9" onclick="get_value(9);">
- <input type="button" class="button_spec" id="btn_division" value="÷" onclick="f_operation('/');">
+ <input type="button" class="button" value="7" onclick="get_value(7);">
+ <input type="button" class="button" value="8" onclick="get_value(8);">
+ <input type="button" class="button" value="9" onclick="get_value(9);">
+ <input type="button" class="button_spec" value="÷" onclick="f_operation('/');">
 
- <input type="button" class="button" id="btn_4" value="4" onclick="get_value(4);">
- <input type="button" class="button" id="btn_5" value="5" onclick="get_value(5);">
- <input type="button" class="button" id="btn_6" value="6" onclick="get_value(6);">
- <input type="button" class="button_spec" id="btn_multiple" value="×" onclick="f_operation('*');">
+ <input type="button" class="button" value="4" onclick="get_value(4);">
+ <input type="button" class="button" value="5" onclick="get_value(5);">
+ <input type="button" class="button" value="6" onclick="get_value(6);">
+ <input type="button" class="button_spec" value="×" onclick="f_operation('*');">
 
- <input type="button" class="button" id="btn_1" value="1" onclick="get_value(1);">
- <input type="button" class="button" id="btn_2" value="2" onclick="get_value(2);">
- <input type="button" class="button" id="btn_3" value="3" onclick="get_value(3);">
- <input type="button" class="button_spec" id="btn_minus" value="−" onclick="f_operation('-');">
+ <input type="button" class="button" value="1" onclick="get_value(1);">
+ <input type="button" class="button" value="2" onclick="get_value(2);">
+ <input type="button" class="button" value="3" onclick="get_value(3);">
+ <input type="button" class="button_spec" value="−" onclick="f_operation('-');">
 
- <input type="button" class="button" id="btn_0" value="0" onclick="get_value(0);">
- <input type="button" class="button" id="btn_dot" value=".">
- <input type="button" class="button" id="btn_result" value="=" style="background-color: #0070BB; color: white" onclick="f_result();">
- <input type="button" class="button_spec" id="btn_plus" value="+" onclick="f_operation('+');">
+ <input type="button" class="button" value="0" onclick="get_value(0);">
+ <input type="button" class="button" value="." onclick="get_value('.');">
+ <input type="button" class="button" value="=" style="background-color: #0070BB; color: white" onclick="f_result();">
+ <input type="button" class="button_spec" value="+" onclick="f_operation('+');">
+
+ 
+ <input type="button" class="additional_button" value="tan" >
+ <input type="button" class="additional_button" value="sin" >
+ <input type="button" class="additional_button" value="cos" >
+ <input type="button" class="additional_button" value="√" >
 
 
-
-
+ 
  </div>
   
  <div class="block_output">
